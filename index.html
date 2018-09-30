@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat" rel="stylesheet">
+    <title>HandSpeak</title>
+</head>
+
+<body>
+    <header>
+        <img src="img/logo.png" alt="">
+        <nav>
+            <a href="#about">Sobre</a>
+            <a href="http://www2.camara.leg.br/a-camara/programas-institucionais/inclusao-social-e-equidade/acessibilidade/dicionario-de-libras"
+                target="_blank">Dicionario</a>
+            <a href="#">Download</a>
+        </nav>
+    </header>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img src="img/img1.jpeg">
+            <div class="text">Vencendo a barreira da comunicação</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="img/img2.jpeg">
+            <div class="text">Ame seu proximo</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="img/img3.jpg">
+            <div class="text">Eu não estou te ouvindo</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+    <div id="about">
+        <h2>Quem somos?</h2>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nam corporis, mollitia, possimus, laboriosam quod
+            odio ipsa delectus ea nisi quia magni modi cupiditate ducimus ad aliquid! Ex, sit laudantium.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nam corporis, mollitia, possimus, laboriosam quod
+            odio ipsa delectus ea nisi quia magni modi cupiditate ducimus ad aliquid! Ex, sit laudantium.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nam corporis, mollitia, possimus, laboriosam quod
+            odio ipsa delectus ea nisi quia magni modi cupiditate ducimus ad aliquid! Ex, sit laudantium.</p>
+    </div>
+    <div id="about">
+        <h2>Nossa motivação</h2>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nam corporis, mollitia, possimus, laboriosam quod
+            odio ipsa delectus ea nisi quia magni modi cupiditate ducimus ad aliquid! Ex, sit laudantium.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nam corporis, mollitia, possimus, laboriosam quod
+            odio ipsa delectus ea nisi quia magni modi cupiditate ducimus ad aliquid! Ex, sit laudantium.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nam corporis, mollitia, possimus, laboriosam quod
+            odio ipsa delectus ea nisi quia magni modi cupiditate ducimus ad aliquid! Ex, sit laudantium.</p>
+    </div>
+    <div class="conteudo">
+    <h1 class="porcentagem" >Dados sobre os deficientes auditivos</h1>
+    <div class="dados">
+       <div> <h1>300 </h1>
+       <h2> Milhões</h2>
+        <p> Quantidade de deficientes auditivos no mundo.
+        </p></div>
+
+        <div><h1>9.7 </h1>
+            <h2>Milhões</h2>
+        <p> Quantidade de deficientes auditivos somente no Brasil. (CENSO IBGE 2010)
+
+        </p></div>
+
+        <div><h1>70</h1>
+            <h2>Porcento</h2>
+        <p> Dos deficientes auditivos possuem dificuldade em ler e escrever.</p></div>
+    </div>
+</div>
+
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+
+
+
+
+
+    <footer>
+        <p>&copy;Estação Hack 2018</p>
+    </footer>
+
+</body>
+
+</html>
